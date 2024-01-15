@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        #form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #e21212;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+   <form name="frm_diem" id="form" action="#" method="post">
+    <p>Input Student Name :</p> <input type="text" id="txt_name" value="">
+   <p>Input Score :</p> <input type="text" id="txt_score" value="">
+   <input type="button" name="" id="btn_diem" onclick="diem(txt_score.value,txt_name.value)"value="Define Grade"/>
+   </form>
+<div id="str_diem">&nbsp;</div>
+<script type="text/javascript">
+function diem(score,name){
+    var string_diem;
+    if (score >=0 && score <= 100 ){
+        if (score>90){
+            string_diem = 'Exelence';
+        }
+        else if (score > 80 )
+        {
+            string_diem = 'Very good'
+        }
+        else if (score > 60 )
+        {
+            string_diem = 'Fair'
+        }
+        else if (score = 50 )
+        {
+            string_diem = 'Very good'
+        }
+        else{
+            string_diem='Fail'
+        }
+    } 
+    else{
+        string_diem = ' Score must be between 0 and 100';
+    }
+    document.getElementById('str_diem').innerHTML=name + "'s grade is <b>"+string_diem+'</b>';
+}
+</script>
+</body>
+</html>

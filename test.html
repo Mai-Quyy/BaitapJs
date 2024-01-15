@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date</title>
+    </head>
+    <body>
+        <input type="text" name="" id="nt" placeholder="Nhap thu ngay" >
+        <button onclick="myFunction()" >OK</button>
+        <p id="demo"></p>
+    </body>
+    <script>
+function myFunction(){
+    
+    var num = document.getElementById("nt").value;
+        var check;
+        if(num == 1)
+        {
+check = " hom nay la chu nhap"
+        }
+        else if (num == 2){
+            check="hom nay la thu 2"
+        }
+        document.getElementById("demo").innerHTML=check;
+}
+    </script>
+</html>
