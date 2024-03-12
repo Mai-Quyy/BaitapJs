@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="./fsh.css">
+    <script src="https://unpkg.com/@phospor-icons/web"></script>
+</head>
+<body>
+    <div class="container">
+       <form action="" class="form">
+        <h1 ">Thêm sản phẩm </h1> 
+        <br>
+        Code: <input type="text" class="code" id="code"> <br>
+        Name: <input type="text" class="name" id="name"> <br>   
+        Imges: <input type="file" id="imageUpload" name="imageUpload" onchange="Pic()"> 
+        <img id="anh" src="" alt="" style="max-width: 30px; max-height: 30px;">
+        <br>
+        Old_price: <input type="text" name="old" id="old"> <br>
+        New_Price: <input type="text" name="new" id="new"><br>
+    
+        <div >
+            <button onclick="save()" class="save">Save</button>
+            <button onclick="show()" id="show">Show</button>
+            <button onclick="reset() " id="reset">Reset</button>
+       </form>
+        </div>
+    </div>
+
+
+</br>
+    <div class="row" id="products">
+        <h2 >THỜI TRANG</h2>
+    </div>
+<script src="./fsh.js"></script>
+</body>
+</html>
